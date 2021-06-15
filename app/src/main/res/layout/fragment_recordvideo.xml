@@ -11,9 +11,8 @@
     <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="450dp" app:srcCompat="@android:drawable/ic_media_play"
-                android:id="@+id/imageView" android:clickable="true" android:onClick="startRecording"/>
+
+
     </TableRow>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
