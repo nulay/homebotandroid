@@ -24,8 +24,9 @@
         tools:layout="@layout/fragment_notifications" />
 
     <fragment
-            android:id="@+id/navigation_video"
+            android:id="@+id/navigation_recordvideo"
             android:name="com.example.homebotrecorder.ui.video.VideoFragment"
             android:label="Video"
-            tools:layout="@layout/video_fragment" />
+            tools:layout="@layout/fragment_recordvideo" />
+    />
 </navigation>

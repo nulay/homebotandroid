@@ -1,22 +1,23 @@
 package com.example.homebotrecorder.ui.video;
 
-
-import android.widget.TextView;
-import androidx.fragment.app.FragmentActivity;
-import androidx.lifecycle.ViewModelProviders;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 import com.example.homebotrecorder.R;
+
 
 public class VideoFragment extends Fragment {
 
     private VideoViewModel mViewModel;
-    private CameraAppActivity cameraAppActivity = new CameraAppActivity();
+
     public static VideoFragment newInstance() {
         return new VideoFragment();
     }
@@ -24,9 +25,12 @@ public class VideoFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        FragmentActivity activ = getActivity();
-//        activ.onCreateView(inflater, container, savedInstanceState);
-        return inflater.inflate(R.layout.video_fragment, container, false);
+        mViewModel =
+                ViewModelProviders.of(this).get(VideoViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_recordvideo, container, false);
+
+        return root;
+
     }
 
     @Override
@@ -43,12 +47,8 @@ public class VideoFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
-    public void startRecording(View view)
-    {
-        cameraAppActivity.startRecordingq(view);
-    }
 
-    public void display(int number) {
 
-    }
+
+
 }

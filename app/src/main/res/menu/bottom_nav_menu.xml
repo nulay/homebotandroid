@@ -17,8 +17,8 @@
         android:title="@string/title_notifications"/>
 
     <item
-            android:id="@+id/navigation_video"
-            android:icon="@drawable/ic_notifications_black_24dp"
-            android:title="Video"/>
+        android:id="@+id/navigation_recordvideo"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="@string/video"/>
 
 </menu>

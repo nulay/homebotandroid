@@ -37,3 +37,7 @@ apply plugin: 'com.android.application'
       androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
   }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '6.7.1'
+}
